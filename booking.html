@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>book appointment</title>
+    <link rel="stylesheet" href="./booking.css">
+</head>
+  <script>
+    // Show confirmation message on form submit
+    function show_alert(){
+        alert('appointment booked')
+    }
+  </script>
+<body>
+      <section id="book">
+    <h2>Book a Visit</h2>
+    <p>Please fill in the form below to schedule a school tour or consultation.</p>
+
+    <form onsubmit="show_alert()" autocomplete="on" target="_blank">
+      <fieldset>
+        <legend>Booking Form</legend>
+
+        <label for="fullname">Full Name:</label><br>
+        <input type="text" id="fullname" name="fullname" required><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="phone">Phone Number:</label><br>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{11}" placeholder="08012345678" required><br><br>
+
+        <label for="date">Preferred Date:</label><br>
+        <input type="date" id="date" name="date" required><br><br>
+
+        <label for="time">Preferred Time:</label><br>
+        <input type="time" id="time" name="time" required><br><br>
+
+        <label for="guests">Number of Guests:</label><br>
+        <input type="number" id="guests" name="guests" min="1" max="10" required><br><br>
+
+        <label for="program">Select Program of Interest:</label><br>
+        <select id="program" name="program">
+          <option>Nursery</option>
+          <option>Primary</option>
+          <option>Secondary</option>
+          <option>ICT Training</option>
+        </select><br><br>
+
+        <label for="notes">Additional Notes:</label><br>
+        <textarea id="notes" name="notes" rows="4" cols="40" placeholder="Write your message here..."></textarea><br><br>
+
+        <!-- <input type="submit" value="Submit Booking"> -->
+         <input type="submit" onclick="show_alert()">
+        <!-- <button type="submit" confirmation-message="Are you sure you want to delete de items?">submit</button> -->
+      </fieldset>
+    </form>
+
+  </section>
+</body>
+</html>

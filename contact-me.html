@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./contact-me.css">
+</head>
+  <script>
+    // Show confirmation message on form submit
+    function show_alert(){
+        alert('successful')
+    }
+  </script>
+<body>
+    <section id="book">
+        <h2>Contact Me</h2>
+        <p>To stay intouch and receive weekly mails</p>
+
+        <form onsubmit="show_alert()" autocomplete="on" target="_blank">
+          <fieldset>
+            <legend>Contact me</legend>
+
+        <label for="fullname">Full Name:</label><br>
+        <input type="text" id="fullname" name="fullname" required><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="phone">Phone Number:</label><br>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{11}" placeholder="08012345678" required><br><br>
+
+       
+        <!-- <input type="submit" value="Submit Booking"> -->
+         <input type="submit" onclick="show_alert()">
+        <!-- <button type="submit" confirmation-message="Are you sure you want to delete de items?">submit</button> -->
+      </fieldset>
+    </form>
+
+  </section>
+</body>
+</html>
